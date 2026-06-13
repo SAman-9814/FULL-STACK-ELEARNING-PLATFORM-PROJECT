@@ -13,13 +13,13 @@ StudyNotion is built on a decoupled client-server architecture using the MERN st
 
 ```mermaid
 graph TD
-    subgraph Client-Side (React Client)
+    subgraph "Client-Side (React Client)"
         Client[React.js SPA - Port 3000]
         Redux[Redux Toolkit Store]
         Client --- Redux
     end
 
-    subgraph Server-Side (Express API Server)
+    subgraph "Server-Side (Express API Server)"
         API[Express.js App - Port 4000]
         Middlewares[Auth & Role-Based Middlewares]
         Controllers[API Business Logic Controllers]
@@ -28,7 +28,7 @@ graph TD
         Middlewares --> Controllers
     end
 
-    subgraph External Systems & Cloud Integrations
+    subgraph "External Systems & Cloud Integrations"
         DB[(MongoDB Database)]
         Cloudinary[Cloudinary Media Storage]
         Razorpay[Razorpay Payment API]
